@@ -1,197 +1,127 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume — Wania Saleem</title>
+    <title>Resume | Wania Saleem</title>
+    <meta name="description" content="Resume of Wania Saleem, a software engineer, frontend developer, and computer science student.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="page-shell">
+    <div id="site-header"></div>
 
-<div class="layout">
+    <main class="page-main">
+      <section class="page-intro">
+        <div class="section-head">Resume</div>
+        <h1>My CV</h1>
+      </section>
 
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-        <div class="sidebar-top">
-            <div>
-                <div class="sidebar-name">wania<span style="color:var(--accent)">.</span>dev</div>
-                <div class="sidebar-role">// cs_student & developer</div>
-            </div>
-            <div class="sidebar-status">
-                <div class="status-dot"></div>
-                open to work
-            </div>
-            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-                <span></span><span></span><span></span>
-            </button>
+      <section class="resume-box">
+        <div class="resume-download">
+          <span class="resume-icon">📄</span>
+          <h2>Download Full Resume</h2>
+          <p>Grab the PDF version to share or print.</p>
+          <a href="RESUME.pdf" download="RESUME.pdf" class="primary-button">Download resume</a>
         </div>
 
-        <div class="mobile-drawer" id="mobile-drawer">
-            <div class="drawer-section">~/navigate</div>
-            <a href="index.html">🏠 home</a>
-            <div class="drawer-section">~/links</div>
-            <a href="projects.html">📁 projects</a>
-            <a href="resume.html" class="active">📄 resume</a>
-            <a href="contact.html">✉ contact</a>
+        <div class="resume-section">
+          <div class="mini-label">About</div>
+          <p>
+            I enjoy building web applications, exploring new technologies, and turning ideas into useful digital products. I focus on building clean, scalable solutions with a strong emphasis on usability, performance, and real-world impact.
+          </p>
         </div>
 
-        <nav>
-            <div class="nav-group-label">~/navigate</div>
-            <a href="index.html"><span class="nav-icon">🏠</span> home</a>
-            <div class="nav-group-label">~/links</div>
-            <a href="projects.html"><span class="nav-icon">📁</span> projects</a>
-            <a href="resume.html" class="active"><span class="nav-icon">📄</span> resume</a>
-            <a href="contact.html"><span class="nav-icon">✉</span> contact</a>
-        </nav>
-        <div class="sidebar-footer">
-            <a href="https://github.com/wnitau" target="_blank" rel="noopener">⌥ github / wnitau</a>
-            <a href="mailto:waniasaleem12@gmail.com">⌥ waniasaleem12@gmail.com</a>
-        </div>
-    </aside>
-
-    <!-- MAIN -->
-    <main class="main">
-
-        <div class="resume-wrap">
-
-            <div class="section-label" style="margin-bottom:8px;">resume</div>
-            <h1 class="section-title">My CV</h1>
-
-            <!-- Download box -->
-            <div class="resume-download-box">
-                <span class="icon-big">📄</span>
-                <h2>Download Full Resume</h2>
-                <p>Grab the PDF version to share or print.</p>
-                <a href="RESUME.pdf" download="RESUME.pdf" class="btn btn-primary" style="margin:0 auto;">↓ download_resume.pdf</a>
-            </div>
-
-            <!-- Inline CV preview -->
-            <div class="resume-section">
-                <div class="resume-section-header">// about</div>
-                <p class="resume-body">
-                    I enjoy building web applications, exploring new technologies, and turning ideas into
-                    useful digital products. Currently working on projects that combine software development,
-                    user experience, and problem solving  with a strong focus on clean code and real-world impact.
-                </p>
-            </div>
-
-            <div class="resume-section">
-                <div class="resume-section-header">// education</div>
-                <div class="resume-row">
-                    <h4>B.Sc. in Computer Science — Federal Urdu University</h4>
-                    <span class="year">In Progress</span>
-                </div>
-                <p class="resume-body">Karachi, Pakistan &nbsp;·&nbsp; CGPA: 3.78 / 4.00</p>
-            </div>
-
-            <div class="resume-section">
-                <div class="resume-section-header">// skills</div>
-                <p class="resume-body">
-                    <b style="color:var(--text)">Languages:</b> HTML · CSS · JavaScript · Python · C++<br>
-                    <b style="color:var(--text)">Frontend:</b> React · Next.js · Tailwind CSS · Responsive Design<br>
-                    <b style="color:var(--text)">Backend:</b> Node.js · Express.js · REST API<br>
-                    <b style="color:var(--text)">Database:</b> MySQL · Oracle<br>
-                    <b style="color:var(--text)">Tools:</b> VS Code · Vercel<br>
-                    <b style="color:var(--text)">Soft Skills:</b> Leadership · Communication · Focused
-                </p>
-            </div>
-
-            <div class="resume-section">
-                <div class="resume-section-header">// projects</div>
-
-                <div class="resume-row">
-                    <h4>Wantrix.dev — SaaS Marketplace &amp; Community</h4>
-                    <span class="year">In Dev</span>
-                </div>
-                <div class="resume-body">
-                    A platform where students and indie developers can showcase SaaS products, connect
-                    through a social feed, and discover projects.
-                    <ul>
-                        <li>SaaS marketplace, developer profiles, social feed, AI chatbot, project discovery</li>
-                        <li>Stack: Next.js · Node.js · MongoDB · AI APIs · Cloud Hosting</li>
-                    </ul>
-                </div>
-
-                <div class="resume-row" style="margin-top:16px;">
-                    <h4>Printing Shop Management Database System</h4>
-                    <span class="year">Completed</span>
-                </div>
-                <div class="resume-body">
-                    Comprehensive database with tables for Customers, Materials, Orders, Employees, Machines, Suppliers, Payments.
-                    <ul>
-                        <li>ERD, normalization, primary &amp; foreign key design</li>
-                        <li>Stored procedure: auto-generates monthly sales reports</li>
-                        <li>Trigger: updates stock levels on new orders</li>
-                        <li>Stack: MySQL · Oracle</li>
-                    </ul>
-                </div>
-
-                <div class="resume-row" style="margin-top:16px;">
-                    <h4>Course &amp; Video Finder Website</h4>
-                    <span class="year">Completed</span>
-                </div>
-                <div class="resume-body">
-                    Curated learning resource site for students seeking focused, structured course content.
-                    <ul>
-                        <li>Stack: HTML · CSS · JavaScript</li>
-                    </ul>
-                </div>
-
-                <div class="resume-row" style="margin-top:16px;">
-                    <h4>Drawing App — Python Desktop Application</h4>
-                    <span class="year">Completed</span>
-                </div>
-                <div class="resume-body">
-                    Tkinter desktop app with color palette, adjustable brush, undo/redo, save &amp; delete.
-                    <ul>
-                        <li>Stack: Python · Tkinter</li>
-                    </ul>
-                </div>
-
-                <div class="resume-row" style="margin-top:16px;">
-                    <h4>Personal Portfolio Website</h4>
-                    <span class="year">Completed</span>
-                </div>
-                <div class="resume-body">
-                    Responsive multi-page portfolio with sidebar navigation, dark theme, dedicated sections for all profile content.
-                    <ul>
-                        <li>Stack: HTML · CSS · JavaScript · React</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="resume-section">
-                <div class="resume-section-header">// contact</div>
-                <p class="resume-body">
-                    📧 waniasaleem12@gmail.com<br>
-                    📍 Karachi, Pakistan<br>
-                    🔗 <a href="https://github.com/wnitau" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none;">github.com/wnitau</a>
-                </p>
-            </div>
-
+        <div class="resume-section">
+          <div class="mini-label">Education</div>
+          <div class="resume-row">
+            <h3>B.Sc. in Computer Science, Federal Urdu University</h3>
+            <span>In Progress</span>
+          </div>
+          <p>Karachi, Pakistan · CGPA: 3.78 / 4.00</p>
         </div>
 
-        <footer class="page-footer">
-            <div>Wania Saleem <span style="color:var(--accent)">©</span> 2026</div>
-            <div style="font-size:0.68rem;">Open to internships, collaborations &amp; freelance opportunities.</div>
-        </footer>
+        <div class="resume-section">
+          <div class="mini-label">Skills</div>
+          <div class="resume-list">
+            <div><strong>Languages:</strong> HTML · CSS · JavaScript · Python · C++</div>
+            <div><strong>Frontend:</strong> React · Next.js · Tailwind CSS · Responsive Design</div>
+            <div><strong>Backend:</strong> Node.js · Express.js · REST API</div>
+            <div><strong>Database:</strong> MySQL · Oracle</div>
+            <div><strong>Core Competencies:</strong> Software Engineering · DBMS · OOP · Data Structures &amp; Algorithms · AI &amp; Predictive Analytics · Compiler Construction · Software Project Management</div>
+            <div><strong>Tools:</strong> VS Code · Vercel</div>
+            <div><strong>Soft Skills:</strong> Leadership · Communication · Focused</div>
+          </div>
+        </div>
 
+        <div class="resume-section">
+          <div class="mini-label">Projects</div>
+
+          <div class="resume-project">
+            <div class="resume-row">
+              <h3>Wantrix.dev: SaaS Marketplace &amp; Community</h3>
+              <span>In Dev</span>
+            </div>
+            <p>
+              A platform where students and indie developers can showcase SaaS products, connect through a social feed, and discover projects.
+            </p>
+            <ul>
+              <li>SaaS marketplace, developer profiles, social feed, AI guidance, project discovery</li>
+              <li>Stack: Next.js · Node.js · MongoDB · AI APIs · Cloud Hosting</li>
+            </ul>
+          </div>
+
+          <div class="resume-project">
+            <div class="resume-row">
+              <h3>Printing Shop Management Database System</h3>
+              <span>Completed</span>
+            </div>
+            <p>
+              Comprehensive database with tables for customers, materials, orders, employees, machines, suppliers, and payments.
+            </p>
+            <ul>
+              <li>ERD, normalization, primary and foreign key design</li>
+              <li>Stored procedure generates monthly sales reports</li>
+              <li>Trigger updates stock levels when new orders are placed</li>
+              <li>Stack: MySQL · Oracle</li>
+            </ul>
+          </div>
+
+          <div class="resume-project">
+            <div class="resume-row">
+              <h3>Course &amp; Video Finder Website</h3>
+              <span>Completed</span>
+            </div>
+            <p>Curated learning resource site for students seeking focused, structured course content.</p>
+            <ul>
+              <li>Stack: HTML · CSS · JavaScript</li>
+            </ul>
+          </div>
+
+          <div class="resume-project">
+            <div class="resume-row">
+              <h3>Drawing App: Python Desktop Application</h3>
+              <span>Completed</span>
+            </div>
+            <p>Tkinter desktop app with color palette, adjustable brush, undo/redo, save and delete.</p>
+            <ul>
+              <li>Stack: Python · Tkinter</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="resume-section">
+          <div class="mini-label">Contact</div>
+          <p>📧 waniasaleem12@gmail.com<br>📍 Karachi, Pakistan<br>🔗 <a href="https://github.com/wnitau" target="_blank" rel="noopener">github.com/wnitau</a></p>
+        </div>
+      </section>
     </main>
-</div>
 
-<script>
-    const hamburger = document.getElementById('hamburger');
-    const drawer    = document.getElementById('mobile-drawer');
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('open');
-        drawer.classList.toggle('open');
-    });
-    document.addEventListener('click', e => {
-        if (!e.target.closest('.sidebar')) {
-            hamburger.classList.remove('open');
-            drawer.classList.remove('open');
-        }
-    });
-</script>
+    <div id="site-footer"></div>
+  </div>
+  <script src="js/components.js"></script>
 </body>
 </html>

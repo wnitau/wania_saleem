@@ -1,122 +1,60 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact — Wania Saleem</title>
+    <title>Contact | Wania Saleem</title>
+    <meta name="description" content="Contact Wania Saleem, a software engineer, developer, and student based in Karachi.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="page-shell">
+    <div id="site-header"></div>
 
-<div class="layout">
+    <main class="page-main">
+      <section class="page-intro">
+        <div class="section-head">Contact</div>
+        <h1>Get in touch</h1>
+        <p>I’m open to internships, collaborations, freelance work, and product ideas.</p>
+      </section>
 
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-        <div class="sidebar-top">
-            <div>
-                <div class="sidebar-name">wania<span style="color:var(--accent)">.</span>dev</div>
-                <div class="sidebar-role">// cs_student & developer</div>
-            </div>
-            <div class="sidebar-status">
-                <div class="status-dot"></div>
-                open to work
-            </div>
-            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-                <span></span><span></span><span></span>
-            </button>
+      <section class="contact-grid">
+        <a class="contact-card" href="mailto:waniasaleem12@gmail.com">
+          <span class="contact-icon">📧</span>
+          <span class="contact-label">Email</span>
+          <span class="contact-value">waniasaleem12@gmail.com</span>
+        </a>
+
+        <a class="contact-card" href="https://github.com/wnitau" target="_blank" rel="noopener">
+          <span class="contact-icon">⌥</span>
+          <span class="contact-label">GitHub</span>
+          <span class="contact-value">github.com/wnitau</span>
+        </a>
+
+        <a class="contact-card" href="https://linkedin.com/in/wania-009958309" target="_blank" rel="noopener">
+          <span class="contact-icon">🔗</span>
+          <span class="contact-label">LinkedIn</span>
+          <span class="contact-value">View LinkedIn profile</span>
+        </a>
+
+        <div class="contact-card contact-static">
+          <span class="contact-icon">📍</span>
+          <span class="contact-label">Location</span>
+          <span class="contact-value">Karachi, Pakistan</span>
         </div>
+      </section>
 
-        <div class="mobile-drawer" id="mobile-drawer">
-            <div class="drawer-section">~/navigate</div>
-            <a href="index.html">🏠 home</a>
-            <div class="drawer-section">~/links</div>
-            <a href="projects.html">📁 projects</a>
-            <a href="resume.html">📄 resume</a>
-            <a href="contact.html" class="active">✉ contact</a>
-        </div>
-
-        <nav>
-            <div class="nav-group-label">~/navigate</div>
-            <a href="index.html"><span class="nav-icon">🏠</span> home</a>
-            <div class="nav-group-label">~/links</div>
-            <a href="projects.html"><span class="nav-icon">📁</span> projects</a>
-            <a href="resume.html"><span class="nav-icon">📄</span> resume</a>
-            <a href="contact.html" class="active"><span class="nav-icon">✉</span> contact</a>
-        </nav>
-        <div class="sidebar-footer">
-            <a href="https://github.com/wnitau" target="_blank" rel="noopener">⌥ github / wnitau</a>
-            <a href="mailto:waniasaleem12@gmail.com">⌥ waniasaleem12@gmail.com</a>
-        </div>
-    </aside>
-
-    <!-- MAIN -->
-    <main class="main">
-
-        <div class="contact-wrap">
-
-            <div class="section-label" style="margin-bottom:8px;">contact</div>
-            <h1 class="section-title">Get In Touch</h1>
-            <p class="section-body" style="margin-bottom:36px;">
-                I'm open to internships, collaborations, and freelance opportunities.
-                Whether you have a project in mind or just want to connect / reach out.
-            </p>
-
-            <div class="contact-grid">
-
-                <a href="mailto:waniasaleem12@gmail.com" class="contact-card">
-                    <div class="contact-card-icon">📧</div>
-                    <div class="contact-card-label">Email</div>
-                    <div class="contact-card-value">waniasaleem12@gmail.com</div>
-                </a>
-
-                <a href="https://github.com/wnitau" target="_blank" rel="noopener" class="contact-card">
-                    <div class="contact-card-icon">⌥</div>
-                    <div class="contact-card-label">GitHub</div>
-                    <div class="contact-card-value">github.com/wnitau</div>
-                </a>
-
-                <a href="https://linkedin.com/in/wania-009958309" target="_blank" rel="noopener" class="contact-card">
-                    <div class="contact-card-icon">🔗</div>
-                    <div class="contact-card-label">LinkedIn</div>
-                    <div class="contact-card-value">linkedin.com/in/wania-009958309</div>
-                </a>
-
-                <div class="contact-card" style="cursor:default;">
-                    <div class="contact-card-icon">📍</div>
-                    <div class="contact-card-label">Location</div>
-                    <div class="contact-card-value">Karachi, Pakistan</div>
-                </div>
-
-            </div>
-
-            <div class="contact-note">
-                <strong>Currently looking for:</strong> internships, part-time roles, freelance projects, or open source collaborations.<br><br>
-                Best way to reach me is email. I typically reply within 24 hours. Let's build something.
-            </div>
-
-        </div>
-
-        <footer class="page-footer">
-            <div>Wania Saleem <span style="color:var(--accent)">©</span> 2026</div>
-            <div style="font-size:0.68rem;">// "Building projects, learning continuously, creating solutions through code."</div>
-        </footer>
-
+      <section class="contact-note">
+        <strong>Currently looking for:</strong> internships, part time roles, freelance projects, or open source collaborations.<br><br>
+        Best way to reach me is email. I usually reply within 24 hours. Let’s build something.
+      </section>
     </main>
-</div>
 
-<script>
-    const hamburger = document.getElementById('hamburger');
-    const drawer    = document.getElementById('mobile-drawer');
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('open');
-        drawer.classList.toggle('open');
-    });
-    document.addEventListener('click', e => {
-        if (!e.target.closest('.sidebar')) {
-            hamburger.classList.remove('open');
-            drawer.classList.remove('open');
-        }
-    });
-</script>
+    <div id="site-footer"></div>
+  </div>
+  <script src="js/components.js"></script>
 </body>
 </html>

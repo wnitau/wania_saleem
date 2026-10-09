@@ -1,247 +1,258 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects; Wania Saleem</title>
+    <title>Projects | Wania Saleem</title>
+    <meta name="description" content="Projects by Wania Saleem, including SaaS platforms, database systems, learning resources, and software experiments.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="page-shell">
+    <div id="site-header"></div>
 
-<div class="layout">
+    <main class="page-main">
+      <section class="page-intro">
+        <div class="section-head">Projects</div>
+        <h1>Things I’ve built</h1>
+        <p>A mix of real world applications, database systems, and frontend work, each one a step forward.</p>
+      </section>
 
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-        <div class="sidebar-top">
+      <section class="project-page-grid">
+        <article class="project-card project-featured">
+          <div class="project-card-head">
             <div>
-                <div class="sidebar-name">wania<span style="color:var(--accent)">.</span>dev</div>
-                <div class="sidebar-role">// cs_student & developer</div>
+              <div class="project-kicker">Frontend · University</div>
+              <h2>University Portal</h2>
+              <p>Responsive university website and management portal</p>
             </div>
-            <div class="sidebar-status">
-                <div class="status-dot"></div>
-                open to work
+            <span class="project-badge badge-done">Live demo</span>
+          </div>
+          <div class="project-card-body">
+            <p>
+              A multi-page university frontend that brings admissions, programs, courses, fees,
+              faculty, news, and student and faculty dashboards into one responsive portal.
+            </p>
+            <div class="mini-label">Highlights</div>
+            <ul>
+              <li>Dedicated sections for academic information and university services</li>
+              <li>Student and faculty dashboard interfaces</li>
+              <li>Responsive layouts, interactive navigation, and theme support</li>
+            </ul>
+            <div class="tag-list">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>Vercel</span>
             </div>
-            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
-
-        <div class="mobile-drawer" id="mobile-drawer">
-            <div class="drawer-section">~/navigate</div>
-            <a href="index.html">🏠 home</a>
-            <div class="drawer-section">~/links</div>
-            <a href="projects.html" class="active">📁 projects</a>
-            <a href="resume.html">📄 resume</a>
-            <a href="contact.html">✉ contact</a>
-        </div>
-
-        <nav>
-            <div class="nav-group-label">~/navigate</div>
-            <a href="index.html"><span class="nav-icon">🏠</span> home</a>
-            <div class="nav-group-label">~/links</div>
-            <a href="projects.html" class="active"><span class="nav-icon">📁</span> projects</a>
-            <a href="resume.html"><span class="nav-icon">📄</span> resume</a>
-            <a href="contact.html"><span class="nav-icon">✉</span> contact</a>
-        </nav>
-        <div class="sidebar-footer">
-            <a href="https://github.com/wnitau" target="_blank" rel="noopener">⌥ github / wnitau</a>
-            <a href="mailto:waniasaleem12@gmail.com">⌥ waniasaleem12@gmail.com</a>
-        </div>
-    </aside>
-
-    <!-- MAIN -->
-    <main class="main">
-
-        <div class="page-header">
-            <div class="section-label">projects</div>
-            <h1 class="section-title">Things I've Built</h1>
-            <p class="section-body">A mix of real-world applications, database systems, and frontend work, each one a step forward.</p>
-        </div>
-
-        <div class="project-list">
-
-            <!-- PROJECT 1: Wantrix -->
-            <div class="project-card">
-                <div class="project-card-header featured">
-                    <div>
-                        <div class="project-eyebrow">⭐ featured project</div>
-                        <div class="project-name">Wantrix.dev</div>
-                        <div class="project-tagline">SaaS Marketplace &amp; Developer Community Platform</div>
-                    </div>
-                    <span class="project-badge badge-wip">🚧 In Development</span>
-                </div>
-                <div class="project-card-body">
-                    <p class="project-desc">
-                        A platform where students and indie developers can showcase and share their SaaS products.
-                        Includes a social feed for sharing experiences, ideas, and development insights plus AI guidance
-                        and a marketplace with revenue via commissions.
-                    </p>
-                    <div class="project-section-label">key features</div>
-                    <ul class="project-features">
-                        <li>SaaS Marketplace for indie and student products</li>
-                        <li>Developer Profiles with portfolio showcase</li>
-                        <li>Social Community Feed</li>
-                        <li>Project Discovery System</li>
-                        <li>Revenue via Marketplace Commissions</li>
-                    </ul>
-                    <div class="project-section-label">tech stack (planned)</div>
-                    <div class="tech-tags">
-                        <span class="tech-tag">Next.js</span>
-                        <span class="tech-tag">Node.js</span>
-                        <span class="tech-tag">MongoDB</span>
-                        <span class="tech-tag">AI APIs</span>
-                        <span class="tech-tag">Cloud Hosting</span>
-                    </div>
-                </div>
+            <div class="project-links">
+              <a href="https://university-wania2.vercel.app/" target="_blank" rel="noopener noreferrer">Live website ↗</a>
+              <a href="https://github.com/wnitau/university" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
             </div>
+          </div>
+        </article>
 
-            <!-- PROJECT 2: Printing Shop -->
-            <div class="project-card">
-                <div class="project-card-header">
-                    <div>
-                        <div class="project-name">Printing Shop Management System</div>
-                        <div class="project-tagline">Database Design &amp; Backend Logic</div>
-                    </div>
-                    <span class="project-badge badge-done">✅ Completed</span>
-                </div>
-                <div class="project-card-body">
-                    <p class="project-desc">
-                        A comprehensive database system covering customers, materials, orders, employees,
-                        machines, suppliers, payments, and shop details with full relational integrity
-                        and advanced SQL features.
-                    </p>
-                    <div class="project-section-label">sql highlights</div>
-                    <div class="project-highlights">
-                        <div class="highlight-item">
-                            <span class="highlight-label">🔁 Trigger</span>
-                            <span class="highlight-text">Automatically updates stock levels when a new order is placed.</span>
-                        </div>
-                        <div class="highlight-item">
-                            <span class="highlight-label">📊 Procedure</span>
-                            <span class="highlight-text">Generates monthly sales reports for each customer automatically.</span>
-                        </div>
-                        <div class="highlight-item">
-                            <span class="highlight-label">🗂 Design</span>
-                            <span class="highlight-text">ERD creation, normalization, primary &amp; foreign key design throughout.</span>
-                        </div>
-                    </div>
-                    <div class="tech-tags">
-                        <span class="tech-tag">MySQL</span>
-                        <span class="tech-tag">Oracle</span>
-                        <span class="tech-tag">ERD Design</span>
-                        <span class="tech-tag">Normalization</span>
-                        <span class="tech-tag">Triggers</span>
-                        <span class="tech-tag">Stored Procedures</span>
-                    </div>
-                </div>
+        <article class="project-card">
+          <div class="project-card-head">
+            <div>
+              <div class="project-kicker">Ecommerce · Frontend</div>
+              <h2>Velora Shop</h2>
+              <p>Multi page online shopping experience</p>
             </div>
-
-            <!-- PROJECT 3: Course Finder -->
-            <div class="project-card">
-                <div class="project-card-header">
-                    <div>
-                        <div class="project-name">Course &amp; Video Finder</div>
-                        <div class="project-tagline">Curated Learning Resource Website</div>
-                    </div>
-                    <span class="project-badge badge-done">✅ Completed</span>
-                </div>
-                <div class="project-card-body">
-                    <p class="project-desc">
-                        A website listing curated courses and video resources based on a structured learning journey 
-                        built for students who struggle finding focused, to-the-point material without the noise.
-                    </p>
-                    <div class="project-section-label">purpose</div>
-                    <ul class="project-features">
-                        <li>Solves the real problem of overwhelming, unfocused course content</li>
-                        <li>Curated personally from a real learning path</li>
-                    </ul>
-                    <div class="tech-tags">
-                        <span class="tech-tag">HTML</span>
-                        <span class="tech-tag">CSS</span>
-                        <span class="tech-tag">JavaScript</span>
-                    </div>
-                </div>
+            <span class="project-badge badge-done">Website</span>
+          </div>
+          <div class="project-card-body">
+            <p>
+              An online shop frontend with dedicated product browsing and details, cart, wishlist,
+              customer account, vendor, and contact pages.
+            </p>
+            <div class="mini-label">Pages &amp; features</div>
+            <ul>
+              <li>Product catalogue and product detail views</li>
+              <li>Cart, wishlist, sign in, and sign up interfaces</li>
+              <li>Vendor and contact pages</li>
+            </ul>
+            <div class="tag-list">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
             </div>
-
-            <!-- PROJECT 4: Drawing App -->
-            <div class="project-card">
-                <div class="project-card-header">
-                    <div>
-                        <div class="project-name">Drawing App</div>
-                        <div class="project-tagline">Python Desktop Application</div>
-                    </div>
-                    <span class="project-badge badge-done">✅ Completed</span>
-                </div>
-                <div class="project-card-body">
-                    <p class="project-desc">
-                        A desktop drawing application built with Python Tkinter featuring a rich creative toolkit.
-                    </p>
-                    <div class="project-section-label">features</div>
-                    <ul class="project-features">
-                        <li>Color Palette &amp; adjustable brush size</li>
-                        <li>Undo / Redo functionality</li>
-                        <li>Save &amp; delete options</li>
-                    </ul>
-                    <div class="tech-tags">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Tkinter</span>
-                    </div>
-                </div>
+            <div class="project-links">
+              <a href="https://velora-wania2.vercel.app/" target="_blank" rel="noopener noreferrer">Live website ↗</a>
+              <a href="https://github.com/wnitau/velora" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
             </div>
+          </div>
+        </article>
 
-            <!-- PROJECT 5: Portfolio -->
-            <div class="project-card">
-                <div class="project-card-header">
-                    <div>
-                        <div class="project-name">Personal Portfolio Website</div>
-                        <div class="project-tagline">Responsive Developer Portfolio</div>
-                    </div>
-                    <span class="project-badge badge-done">✅ Completed</span>
-                </div>
-                <div class="project-card-body">
-                    <p class="project-desc">
-                        A fully responsive personal portfolio website built from scratch. Features a fixed sidebar
-                        navigation, multi-page layout, dark theme with an orange accent, and dedicated sections
-                        for About, Education, Skills, Projects, and Contact.
-                    </p>
-                    <div class="project-section-label">highlights</div>
-                    <ul class="project-features">
-                        <li>Multi-page layout with sidebar navigation</li>
-                        <li>Dark theme  responsive &amp; mobile-friendly</li>
-                        <li>No frameworks on the first version  pure HTML &amp; CSS</li>
-                    </ul>
-                    <div class="tech-tags">
-                        <span class="tech-tag">HTML</span>
-                        <span class="tech-tag">CSS</span>
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">React</span>
-                    </div>
-                </div>
+        <article class="project-card">
+          <div class="project-card-head">
+            <div>
+              <div class="project-kicker">AI · Predictive analytics</div>
+              <h2>Personalized Drug Reaction Predictor</h2>
+              <p>AI prediction agent · Wania AI Lab</p>
             </div>
+            <span class="project-badge badge-wip">In progress</span>
+          </div>
+          <div class="project-card-body">
+            <p>
+              An ongoing AI project exploring personalized prediction of drug reactions.
+              The repository includes experiments and lab work alongside the predictor agent.
+            </p>
+            <div class="mini-label">Current work</div>
+            <ul>
+              <li>Developing a personalized drug reaction prediction agent</li>
+              <li>Iterating through AI and predictive analytics experiments</li>
+            </ul>
+            <div class="tag-list">
+              <span>Python</span>
+              <span>Jupyter Notebook</span>
+              <span>AI</span>
+              <span>Predictive Analytics</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/wnitau/wania_ai_lab" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            </div>
+          </div>
+        </article>
 
-        </div>
+        <article class="project-card">
+          <div class="project-card-head">
+            <div>
+              <h2>Wantrix.dev</h2>
+              <p>SaaS Marketplace &amp; Developer Community Platform</p>
+            </div>
+            <span class="project-badge badge-wip">In development</span>
+          </div>
+          <div class="project-card-body">
+            <p>
+              A platform where students and indie developers can showcase and share their SaaS products.
+              It includes a social feed for experiences and product ideas, AI guidance, and a marketplace with revenue via commissions.
+            </p>
+            <div class="mini-label">Key features</div>
+            <ul>
+              <li>SaaS marketplace for indie and student products</li>
+              <li>Developer profiles with portfolio showcase</li>
+              <li>Social community feed</li>
+              <li>Project discovery system</li>
+              <li>Revenue via marketplace commissions</li>
+            </ul>
+            <div class="mini-label">Tech stack</div>
+            <div class="tag-list">
+              <span>Next.js</span>
+              <span>Node.js</span>
+              <span>MongoDB</span>
+              <span>AI APIs</span>
+              <span>Cloud Hosting</span>
+            </div>
+          </div>
+        </article>
 
-        <footer class="page-footer">
-            <div>Wania Saleem <span style="color:var(--accent)">©</span> 2026</div>
-            <div style="font-size:0.68rem;">// "Building projects, learning continuously, creating solutions through code."</div>
-        </footer>
+        <article class="project-card">
+          <div class="project-card-head">
+            <div>
+              <h2>Printing Shop Management System</h2>
+              <p>Database Design &amp; Backend Logic</p>
+            </div>
+            <span class="project-badge badge-done">Completed</span>
+          </div>
+          <div class="project-card-body">
+            <p>
+              A comprehensive database system covering customers, materials, orders, employees, machines, suppliers, payments, and shop details with full relational integrity and advanced SQL features.
+            </p>
+            <div class="mini-label">SQL highlights</div>
+            <div class="detail-list">
+              <div><strong>Trigger</strong><span>Automatically updates stock levels when a new order is placed.</span></div>
+              <div><strong>Procedure</strong><span>Generates monthly sales reports for each customer automatically.</span></div>
+              <div><strong>Design</strong><span>ERD creation, normalization, primary and foreign key design throughout.</span></div>
+            </div>
+            <div class="tag-list">
+              <span>MySQL</span>
+              <span>Oracle</span>
+              <span>ERD Design</span>
+              <span>Normalization</span>
+              <span>Triggers</span>
+              <span>Stored Procedures</span>
+            </div>
+          </div>
+        </article>
 
+        <article class="project-card">
+          <div class="project-card-head">
+            <div>
+              <h2>Course &amp; Video Finder</h2>
+              <p>Curated Learning Resource Website</p>
+            </div>
+            <span class="project-badge badge-done">Completed</span>
+          </div>
+          <div class="project-card-body">
+            <p>
+              A website listing curated courses and video resources based on a structured learning journey built for students who struggle to find focused, to-the-point material without the noise.
+            </p>
+            <div class="mini-label">Purpose</div>
+            <ul>
+              <li>Solves the real problem of overwhelming, unfocused course content</li>
+              <li>Curated personally from a real learning path</li>
+            </ul>
+            <div class="tag-list">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card-head">
+            <div>
+              <h2>Drawing App</h2>
+              <p>Python Desktop Application</p>
+            </div>
+            <span class="project-badge badge-done">Completed</span>
+          </div>
+          <div class="project-card-body">
+            <p>
+              A desktop drawing application built with Python Tkinter featuring a rich creative toolkit.
+            </p>
+            <div class="mini-label">Features</div>
+            <ul>
+              <li>Color palette and adjustable brush size</li>
+              <li>Undo and redo functionality</li>
+              <li>Save and delete options</li>
+            </ul>
+            <div class="tag-list">
+              <span>Python</span>
+              <span>Tkinter</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card-head">
+            <div>
+              <h2>Personal Portfolio Website</h2>
+              <p>Responsive Developer Portfolio</p>
+            </div>
+            <span class="project-badge badge-done">Completed</span>
+          </div>
+          <div class="project-card-body">
+            <p>
+              A multi-page portfolio experience with a dark developer aesthetic, polished sections, and clear communication of skills, projects, and contact details.
+            </p>
+            <div class="tag-list">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+          </div>
+        </article>
+      </section>
     </main>
-</div>
 
-<script>
-    const hamburger = document.getElementById('hamburger');
-    const drawer    = document.getElementById('mobile-drawer');
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('open');
-        drawer.classList.toggle('open');
-    });
-    document.addEventListener('click', e => {
-        if (!e.target.closest('.sidebar')) {
-            hamburger.classList.remove('open');
-            drawer.classList.remove('open');
-        }
-    });
-</script>
+    <div id="site-footer"></div>
+  </div>
+  <script src="js/components.js"></script>
 </body>
 </html>
