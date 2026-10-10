@@ -1281,36 +1281,38 @@ body {
 
 @media (max-width: 760px) {
   .hero-scroll {
-    height: 210vh;
+    height: 220vh;
   }
 
   .hero-stage {
     top: 132px;
     height: calc(100svh - 132px);
-    min-height: 480px;
+    min-height: 540px;
   }
 
   .hero-title {
-    top: 34%;
-    font-size: clamp(3.3rem, 15vw, 6.5rem);
+    top: 12%;
+    font-size: clamp(3.1rem, 15vw, 5.8rem);
   }
 
   .hero-portrait {
-    width: clamp(210px, 58vw, 310px);
-    top: 58%;
+    width: clamp(170px, 46vw, 240px);
+    top: 36%;
+    left: 50%;
   }
 
   .hero-intro-copy {
-    top: 78%;
-    right: 24px;
-    width: auto;
-    max-width: calc(100% - 48px);
-    transform: translateY(-50%);
+    top: 80%;
+    left: 50%;
+    right: auto;
+    width: min(320px, calc(100% - 32px));
+    transform: translate(-50%, -50%);
+    text-align: center;
   }
 
   .hero-greeting {
-    margin-bottom: 6px;
-    font-size: 2.8rem;
+    margin-bottom: 8px;
+    font-size: 2.5rem;
   }
 
   .hero-intro-copy p {
@@ -1460,31 +1462,76 @@ body {
   }
 
   .topbar {
-    padding: 16px 20px;
+    padding: 14px 18px;
   }
 
   .topbar-inner {
-    flex-wrap: wrap;
-    justify-content: center;
-    row-gap: 16px;
-  }
-
-  .brand,
-  .cta-link {
-    flex: 1 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
   }
 
   .brand {
+    justify-self: start;
     text-align: left;
+    flex: 1 1 auto;
+  }
+
+  .mobile-menu-toggle {
+    display: inline-flex;
+    justify-self: end;
+    flex: 0 0 auto;
   }
 
   .cta-link {
-    width: auto;
+    display: none;
   }
 
   .nav {
-    order: 3;
+    display: none;
+    order: 4;
     width: 100%;
+    padding: 10px;
+    background: rgba(17,17,17,0.98);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 18px;
+    box-shadow: 0 20px 32px rgba(0,0,0,0.22);
+    opacity: 0;
+    transform: translateY(-8px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    pointer-events: none;
+  }
+
+  .nav.is-open {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .nav.is-open a {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 12px 14px;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    background: rgba(255,255,255,0.015);
+  }
+
+  .nav.is-open a:hover,
+  .nav.is-open a:focus-visible,
+  .nav.is-open a.is-current,
+  .nav.is-open a[aria-current="page"] {
+    border-color: rgba(214,124,71,0.45);
+    background: rgba(214,124,71,0.08);
+    color: #fff;
+  }
+
+  .liquid-slider {
+    display: none;
   }
 
   .footer-bottom {
@@ -1527,6 +1574,55 @@ body {
 
 .topbar-inner {
   gap: 18px;
+}
+
+.mobile-menu-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 50%;
+  background: rgba(255,255,255,0.02);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+  cursor: pointer;
+  transition: border-color 0.2s ease, transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mobile-menu-toggle:hover,
+.mobile-menu-toggle:focus-visible,
+.mobile-menu-toggle.is-open {
+  border-color: rgba(214,124,71,0.6);
+  background: rgba(214,124,71,0.08);
+  box-shadow: 0 14px 28px rgba(214,124,71,0.12);
+}
+
+.mobile-menu-toggle span {
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #f5f5f4;
+  transition: transform 0.25s ease, opacity 0.25s ease, background 0.25s ease;
+}
+
+.mobile-menu-toggle.is-open span {
+  background: #f9c8aa;
+}
+
+.mobile-menu-toggle.is-open span:nth-child(1) {
+  transform: translateY(2px) scale(0.9);
+}
+
+.mobile-menu-toggle.is-open span:nth-child(2) {
+  transform: scale(1.15);
+}
+
+.mobile-menu-toggle.is-open span:nth-child(3) {
+  transform: translateY(-2px) scale(0.9);
 }
 
 .liquid-group {
@@ -1616,6 +1712,18 @@ body {
 
   .liquid-group::-webkit-scrollbar {
     display: none;
+  }
+
+  .mobile-menu-toggle {
+    display: inline-flex;
+  }
+
+  #main-navigation {
+    display: none;
+  }
+
+  #main-navigation.is-open {
+    display: flex;
   }
 }
 

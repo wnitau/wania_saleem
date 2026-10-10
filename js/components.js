@@ -24,9 +24,18 @@ function initializeNavigation() {
     const nav = document.querySelector('.liquid-group');
     if (!nav) return;
 
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
     const links = Array.from(nav.querySelectorAll('a'));
     const slider = nav.querySelector('.liquid-slider');
     if (!slider || links.length === 0) return;
+
+    const closeMenu = () => {
+        nav.classList.remove('is-open');
+        if (menuToggle) {
+            menuToggle.classList.remove('is-open');
+            menuToggle.setAttribute('aria-expanded', 'false');
+        }
+    };
 
     const setCurrentLink = () => {
         const currentPath = window.location.pathname;
@@ -43,7 +52,10 @@ function initializeNavigation() {
             if (isCurrent) link.setAttribute('aria-current', 'page');
             else link.removeAttribute('aria-current');
         });
-        moveSlider(currentLink);
+
+        if (window.innerWidth > 860) {
+            moveSlider(currentLink);
+        }
     };
 
     const moveSlider = link => {
@@ -54,10 +66,30 @@ function initializeNavigation() {
         nav.style.setProperty('--slider-width', `${linkRect.width}px`);
     };
 
+    if (menuToggle) {
+        menuToggle.addEventListener('click', event => {
+            event.stopPropagation();
+            const isOpen = nav.classList.toggle('is-open');
+            menuToggle.classList.toggle('is-open', isOpen);
+            menuToggle.setAttribute('aria-expanded', String(isOpen));
+        });
+    }
+
+    document.addEventListener('click', event => {
+        const topbar = document.querySelector('.topbar-inner');
+        if (!topbar || topbar.contains(event.target)) return;
+        closeMenu();
+    });
+
     links.forEach(link => {
-        link.addEventListener('pointerenter', () => moveSlider(link));
-        link.addEventListener('focus', () => moveSlider(link));
+        link.addEventListener('pointerenter', () => {
+            if (window.innerWidth > 860) moveSlider(link);
+        });
+        link.addEventListener('focus', () => {
+            if (window.innerWidth > 860) moveSlider(link);
+        });
         link.addEventListener('click', () => {
+            if (window.innerWidth <= 860) closeMenu();
             links.forEach(item => {
                 const isCurrent = item === link;
                 item.classList.toggle('is-current', isCurrent);
@@ -71,7 +103,12 @@ function initializeNavigation() {
     nav.addEventListener('focusout', event => {
         if (!nav.contains(event.relatedTarget)) setCurrentLink();
     });
-    window.addEventListener('resize', setCurrentLink);
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 860) {
+            closeMenu();
+        }
+        setCurrentLink();
+    });
     window.addEventListener('hashchange', setCurrentLink);
     setCurrentLink();
 }
