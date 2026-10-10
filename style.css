@@ -1303,11 +1303,11 @@ body {
 
   .hero-intro-copy {
     top: 80%;
-    left: 50%;
+    left: 16px;
     right: auto;
     width: min(320px, calc(100% - 32px));
-    transform: translate(-50%, -50%);
-    text-align: center;
+    transform: translateY(-50%);
+    text-align: left;
   }
 
   .hero-greeting {
