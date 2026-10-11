@@ -31,6 +31,7 @@ function initializeNavigation() {
 
     const closeMenu = () => {
         nav.classList.remove('is-open');
+        document.body.classList.remove('menu-open');
         if (menuToggle) {
             menuToggle.classList.remove('is-open');
             menuToggle.setAttribute('aria-expanded', 'false');
@@ -72,6 +73,7 @@ function initializeNavigation() {
             const isOpen = nav.classList.toggle('is-open');
             menuToggle.classList.toggle('is-open', isOpen);
             menuToggle.setAttribute('aria-expanded', String(isOpen));
+            document.body.classList.toggle('menu-open', isOpen);
         });
     }
 
